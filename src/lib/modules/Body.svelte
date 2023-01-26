@@ -6,9 +6,19 @@
   import Aside from './Aside/Aside.svelte';
   import ContactInfo from '$lib/components/ContactInfo/ContactInfo.svelte';
   import Projects from './Projects/Projects.svelte';
+  import Stack from './Stack/Stack.svelte';
+  import { cvHeight } from '$lib/store/window';
+  import { watchResize } from 'svelte-watch-resize';
+
+  function handleCVResize(node: HTMLElement) {
+    cvHeight.update((cvHeight) => {
+      cvHeight = node.clientHeight + 2;
+      return cvHeight;
+    });
+  }
 </script>
 
-<div class="flex flex-col gap-8 p-4">
+<div class="flex flex-col gap-8 p-4" use:watchResize={handleCVResize}>
   <section class="flex justify-between">
     <div class="flex flex-col gap-4">
       <Header>cv</Header>
@@ -23,5 +33,6 @@
       <Aside />
     </div>
     <Projects />
+    <Stack />
   </section>
 </div>

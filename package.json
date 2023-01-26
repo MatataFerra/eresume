@@ -36,6 +36,7 @@
   "type": "module",
   "dependencies": {
     "jspdf": "^2.5.1",
-    "svelte-pdf": "^1.0.16"
+    "svelte-pdf": "^1.0.16",
+    "svelte-watch-resize": "^1.0.3"
   }
 }

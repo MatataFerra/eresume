@@ -1,28 +1,22 @@
 <script lang="ts">
   import type { Course } from '$lib/types';
-
-  let isOpenSkill_1 = false;
   export let courseInfo: Course;
 </script>
 
 <div class="text-white space-y-1">
   <div>
-    <div>
+    <div class="mb-2">
       <h3 class="capitalize font-bold font-sofia text-blue text-sm tracking-widest">
         {courseInfo.name}
         <span class="text-white">-</span>
         <span class="font-bold font-sofia text-yellow">{courseInfo.institution}</span>
       </h3>
     </div>
-
-    <details bind:open={isOpenSkill_1}>
-      <summary class="cursor-pointer font-bold font-sofia text-xs tracking-widest transition-all"
-        >Details</summary
-      >
-      <code class="bg-red p-1">{courseInfo.year}</code>
-      <p>
-        {courseInfo.description}
-      </p>
-    </details>
+    <div class="flex w-fit mt-2 items-center justify-center">
+      <p class="p-1 font-bold text-red">{courseInfo.year}</p>
+    </div>
+    <p class="text-sm">
+      {courseInfo.description}
+    </p>
   </div>
 </div>

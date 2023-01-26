@@ -1,6 +1,5 @@
 <script>
   import BrandColorWord from '$lib/components/ColorWord/BrandColorWord.svelte';
-  import ColorWord from '$lib/components/ColorWord/ColorWord.svelte';
   import Project from '$lib/components/Project/Project.svelte';
   import Title from '$lib/components/Title/Title.svelte';
   import { PROJECTS } from '$lib/utils/constants';

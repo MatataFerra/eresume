@@ -19,9 +19,9 @@ export function outsideClick(
   };
 }
 
-export const generateNumbers = () => {
+export const generateNumbers = (limit: number) => {
   const numbers = [];
-  for (let i = 0; i < 200; i++) {
+  for (let i = 0; i < limit; i++) {
     numbers.push(i);
   }
   return numbers;
@@ -30,16 +30,16 @@ export const generateNumbers = () => {
 export const generatePdf = (element: HTMLElement | null) => {
   if (!element) return;
 
-  console.log('🚀 ~ file: methods.ts:31 ~ generatePdf ~ element', element);
-
   const pdf = new jsPDF('p', 'pt', 'a4');
 
   pdf.html(element, {
     callback: (pdf) => {
-      pdf.save('test.pdf');
+      const lastPage = pdf.getNumberOfPages();
+      pdf.deletePage(lastPage);
+      pdf.output('dataurlnewwindow');
     },
     margin: [2, 2, 2, 2],
-    width: 1912,
+    width: 2480,
     x: 0,
     y: 0,
     html2canvas: {
@@ -50,8 +50,8 @@ export const generatePdf = (element: HTMLElement | null) => {
       logging: true,
       scrollX: 0,
       scrollY: 0,
-      windowWidth: 1912,
-      windowHeight: 768
+      windowWidth: 2480,
+      windowHeight: 3508
     }
   });
 };

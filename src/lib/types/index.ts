@@ -1,3 +1,5 @@
+import type * as Icon from '$lib/components/Icons/Stack';
+
 export type Item = {
   description: string;
 };
@@ -46,4 +48,15 @@ export type Brands = {
     color: string;
     name: string;
   };
+};
+
+export type Stack = {
+  name: string;
+  icon: keyof typeof Icon;
+};
+
+export type Accordion = {
+  isOpen: boolean;
+  title: string;
+  entries: Stack[];
 };

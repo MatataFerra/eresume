@@ -1,11 +1,15 @@
-import type { Brands, Course, Job } from '$lib/types';
+import type { Brands, Course, Job, Stack } from '$lib/types';
 
 export const PERSONAL_INFO = {
+  name: 'Matias Ferraro',
+  job: 'Frontend Web Developer',
   mail: 'matias.agf@gmail.com',
   phone: '+39 348 113 3761',
   portfolio: 'https://matiasferraro.com.ar',
   place: 'Living in Italy 🇮🇹',
-  province: 'Province Asti, Piedmont'
+  PDFplace: 'Living in Italy',
+  province: 'Province Asti, Piedmont',
+  summary: 'I am a Frontend Developer with 2 years of experience'
 };
 
 export const JOB: Job = {
@@ -27,7 +31,7 @@ export const JOB: Job = {
   ]
 };
 
-export const SKILLS = ['Skill 1', 'Skill 2', 'Skill 3'];
+export const SKILLS = ['Team working', 'Fast learning', 'Self motivated', 'Self time management'];
 
 export const COURSES: Course[] = [
   {
@@ -52,6 +56,14 @@ export const COURSES: Course[] = [
     year: '2022',
     description:
       'Brings tools to build and manage apps with VueJS, either apps builded in Vue 2. The course cover the enterily ecosystem of Vue: Store, Context, Composables, Hooks'
+  },
+
+  {
+    name: 'Fullstack Web Development',
+    institution: 'ACAMICA',
+    year: '2019',
+    description:
+      'This course allows me to learn the basics of web development and logic, including HTML, CSS, JavaScript, NodeJS, Express, MongoDB, among others'
   }
 ];
 
@@ -156,3 +168,113 @@ export const BRANDS: Brands = {
     name: 'Node'
   }
 };
+
+export const FRONTEND: Stack[] = [
+  {
+    name: 'React',
+    icon: 'react'
+  },
+  {
+    name: 'Svelte',
+    icon: 'svelte'
+  },
+  {
+    name: 'Vue',
+    icon: 'vue'
+  }
+];
+
+export const FRONTEND_FRAMEWORKS: Stack[] = [
+  {
+    name: 'NextJS',
+    icon: 'next'
+  }
+];
+
+export const STYLES: Stack[] = [
+  {
+    name: 'SASS',
+    icon: 'sass'
+  }
+];
+
+export const REACT_COMPONENTS: Stack[] = [
+  {
+    name: 'MaterialUI',
+    icon: 'mui'
+  }
+];
+
+export const BACKEND: Stack[] = [
+  {
+    name: 'MongoDB',
+    icon: 'mongo'
+  },
+  {
+    name: 'Express',
+    icon: 'express'
+  }
+];
+
+export const PROGRAMMING_LANGUAGES: Stack[] = [
+  {
+    name: 'JavaScript',
+    icon: 'js'
+  },
+  {
+    name: 'TypeScript',
+    icon: 'ts'
+  }
+];
+
+export const STACK = {
+  'Programming Languages': PROGRAMMING_LANGUAGES,
+  Frontend: FRONTEND,
+  'Frontend Frameworks': FRONTEND_FRAMEWORKS,
+  'React Components': REACT_COMPONENTS,
+  Styles: STYLES,
+  Backend: BACKEND
+};
+
+export const PDF_STACK: Stack[] = [
+  {
+    name: 'React',
+    icon: 'react'
+  },
+  {
+    name: 'Svelte',
+    icon: 'svelte'
+  },
+  {
+    name: 'Vue',
+    icon: 'vue'
+  },
+  {
+    name: 'NextJS',
+    icon: 'next'
+  },
+  {
+    name: 'SASS',
+    icon: 'sass'
+  },
+  {
+    name: 'MaterialUI',
+    icon: 'mui'
+  },
+  {
+    name: 'MongoDB',
+    icon: 'mongo'
+  },
+  {
+    name: 'Express',
+    icon: 'express'
+  },
+  {
+    name: 'JavaScript',
+    icon: 'js'
+  },
+  {
+    name: 'TypeScript',
+    icon: 'ts'
+  }
+];
