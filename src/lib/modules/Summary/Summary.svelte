@@ -8,7 +8,7 @@
     <span slot="title">summary</span>
   </Title>
 
-  <p class="text-white mt-4 font-sofia">
+  <p class="text-white mt-4 font-sofia text-xl">
     {PERSONAL_INFO.summary}
   </p>
 </div>

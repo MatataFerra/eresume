@@ -9,7 +9,8 @@ export const PERSONAL_INFO = {
   place: 'Living in Italy 🇮🇹',
   PDFplace: 'Living in Italy',
   province: 'Province Asti, Piedmont',
-  summary: 'I am a Frontend Developer with 2 years of experience'
+  summary:
+    "I'm a Frontend Developer with 3 years of experience, I'm passionate about web development and I'm always looking to develop better and better applications. I work with the latest tools to provide the best user experience. I focus on performance, clean code and best practices."
 };
 
 export const JOB: Job = {
