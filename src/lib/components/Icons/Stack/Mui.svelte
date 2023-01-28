@@ -16,7 +16,6 @@
       stroke-linejoin="round"
     /><g id="SVGRepo_iconCarrier">
       <g>
-        <title>Material UI</title>
         <polygon
           fill="#00B0FF"
           points="0 110.848 0 0 96 55.424 96 92.3733333 32 55.424 32 129.322667"

@@ -2,8 +2,9 @@
   import { accordions, updateAccordion } from '$lib/store/window';
   import type { Accordion, Stack } from '$lib/types';
   import { slide } from 'svelte/transition';
-  import Icon from '../Icons/Icon.svelte';
+  import IconTooltip from '../Tooltip/IconTooltip.svelte';
   export let entry: [string, Stack[]];
+  export let entryStyles: string;
 
   const iconsStyles = 'w-16';
 
@@ -21,7 +22,7 @@
 </script>
 
 <button
-  class="font-fira glow"
+  class={entryStyles}
   on:click={() => updateAccordion(data?.title, !data?.isOpen)}
   on:click={toggle}
   aria-expanded={isOpen}
@@ -45,7 +46,7 @@
   <ul class="flex gap-8 ml-10" transition:slide={{ duration: 300 }}>
     {#each data.entries as { icon, name }}
       <li>
-        <Icon {icon} {iconsStyles} />
+        <IconTooltip title={name} {icon} {iconsStyles} />
       </li>
     {/each}
   </ul>

@@ -9,6 +9,6 @@
   <Title><span slot="title">stack</span></Title>
 
   {#each Object.entries(STACK) as entry}
-    <Accordion {entry} />
+    <Accordion {entry} entryStyles="font-fira glow" />
   {/each}
 </section>

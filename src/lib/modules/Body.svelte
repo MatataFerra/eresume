@@ -8,17 +8,25 @@
   import Projects from './Projects/Projects.svelte';
   import Stack from './Stack/Stack.svelte';
   import { cvHeight } from '$lib/store/window';
-  import { watchResize } from 'svelte-watch-resize';
+
+  let node: HTMLElement;
 
   function handleCVResize(node: HTMLElement) {
-    cvHeight.update((cvHeight) => {
-      cvHeight = node.clientHeight + 2;
-      return cvHeight;
+    const observer = new ResizeObserver((entries) => {
+      for (let entry of entries) {
+        const cr = entry.contentRect;
+        cvHeight.update((cvHeight) => {
+          cvHeight = cr.height + 50;
+          return cvHeight;
+        });
+      }
     });
+
+    observer.observe(node);
   }
 </script>
 
-<div class="flex flex-col gap-8 p-4" use:watchResize={handleCVResize}>
+<div class="flex flex-col gap-8 p-4" bind:this={node} use:handleCVResize>
   <section class="sm:grid sm:grid-cols-[1fr,25%] sm:gap-x-16 flex flex-col gap-4">
     <div class="flex flex-col gap-4">
       <Header>cv</Header>
