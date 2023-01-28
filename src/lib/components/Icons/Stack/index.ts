@@ -9,3 +9,4 @@ export { default as react } from '$lib/components/Icons/Stack/React.svelte';
 export { default as mui } from '$lib/components/Icons/Stack/Mui.svelte';
 export { default as mongo } from '$lib/components/Icons/Stack/Mongo.svelte';
 export { default as express } from '$lib/components/Icons/Stack/Express.svelte';
+export { default as tailwind } from '$lib/components/Icons/Stack/Tailwind.svelte';

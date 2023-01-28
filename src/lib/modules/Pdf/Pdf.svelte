@@ -17,10 +17,10 @@
   });
 </script>
 
-<section class="pdf-container shadow-resume w-full" bind:this={html}>
+<section class="pdf-container bg-black shadow-resume w-full" bind:this={html}>
   <article class="flex gap-4 px-4 w-3/4">
     <div class="flex flex-col gap-2">
-      <Lines limit={72} />
+      <Lines limit={120} />
     </div>
     <div class="flex flex-col">
       <div class="flex flex-col gap-4 px-4">
@@ -31,12 +31,12 @@
           </div>
           <PdfContactInfo />
         </section>
-        <section class="flex flex-col gap-4">
+        <section class="flex flex-col gap-4 mb-56">
           <PdfSummary />
           <PdfWork />
         </section>
       </div>
-      <section class="px-4">
+      <section class="px-4 mb-64">
         <PdfAside />
       </section>
       <section class="px-4 mt-4 ">
@@ -44,9 +44,71 @@
           <span class="text-2xl" slot="title">stack</span>
         </Title>
 
-        <div class="flex gap-4 mt-4">
-          <img class="w-16" src="/img/stack/react-cv.png" alt="React Icon" />
-          <!-- <img class="w-16" src="/img/stack/vue-cv.png" alt="Vue Icon" /> -->
+        <div class="grid grid-cols-1 gap-4 mt-4">
+          <div class="flex gap-4">
+            <div>
+              <h3 class="text-xl text-white font-bold">Programming Languages</h3>
+              <hr class="h-px my-4 bg-gray border-0" />
+            </div>
+            <div class="flex gap-4 items-center">
+              <img class="w-10" src="/img/stack/js-cv.png" alt="JS Icon" />
+              <img class="w-10" src="/img/stack/ts-cv.png" alt="TS Icon" />
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div>
+              <h3 class="text-xl text-white font-bold">Styles</h3>
+              <hr class="h-px my-4 bg-gray border-0" />
+            </div>
+            <div class="flex gap-4 items-center">
+              <img class="w-10" src="/img/stack/tailwind-cv.png" alt="Tailwind Icon" />
+              <img class="w-10" src="/img/stack/sass-cv.png" alt="SASS Icon" />
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div>
+              <h3 class="text-xl text-white font-bold">Frameworks</h3>
+              <hr class="h-px my-4 bg-gray border-0" />
+            </div>
+            <div class="flex gap-4 items-center">
+              <img class="w-10" src="/img/stack/react-cv.png" alt="React Icon" />
+              <img class="w-10" src="/img/stack/vue-cv.png" alt="Vue Icon" />
+              <img class="w-10" src="/img/stack/svelte-cv.png" alt="Svelte Icon" />
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div>
+              <h3 class="text-xl text-white font-bold">UI Libraries</h3>
+              <hr class="h-px my-4 bg-gray border-0" />
+            </div>
+            <div class="flex gap-4 items-center">
+              <img class="w-10" src="/img/stack/mui-cv.png" alt="Material Icon" />
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div>
+              <h3 class="text-xl text-white font-bold">React Frameworks</h3>
+              <hr class="h-px my-4 bg-gray border-0" />
+            </div>
+            <div class="flex gap-4 items-center">
+              <img class="w-16" src="/img/stack/next-cv.png" alt="NextJS Icon" />
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div>
+              <h3 class="text-xl text-white font-bold">Backend</h3>
+              <hr class="h-px my-4 bg-gray border-0" />
+            </div>
+            <div class="flex gap-4 items-center">
+              <img class="w-10" src="/img/stack/express-cv.png" alt="Express Icon" />
+              <img class="w-10" src="/img/stack/mongodb-cv.png" alt="Mongo Icon" />
+            </div>
+          </div>
         </div>
       </section>
     </div>

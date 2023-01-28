@@ -2,10 +2,13 @@
   import { accordions, updateAccordion } from '$lib/store/window';
   import type { Accordion, Stack } from '$lib/types';
   import { slide } from 'svelte/transition';
-  import IconTooltip from '../Tooltip/IconTooltip.svelte';
+  import Icon from '../Icons/Icon.svelte';
   export let entry: [string, Stack[]];
 
   const iconsStyles = 'w-16';
+
+  let isOpen = false;
+  const toggle = () => (isOpen = !isOpen);
 
   accordions.update((accordions) => {
     accordions.push({ isOpen: false, title: entry[0], entries: entry[1] });
@@ -20,7 +23,8 @@
 <button
   class="font-fira glow"
   on:click={() => updateAccordion(data?.title, !data?.isOpen)}
-  aria-expanded={data.isOpen}
+  on:click={toggle}
+  aria-expanded={isOpen}
 >
   <svg
     style="tran"
@@ -35,13 +39,13 @@
   >
     <path d="M9 5l7 7-7 7" />
   </svg>
-  <span class="text-white">{entry[0]}</span>
+  <span class="text-white text-2xl sm:text-4xl">{entry[0]}</span>
 </button>
 {#if data.isOpen}
   <ul class="flex gap-8 ml-10" transition:slide={{ duration: 300 }}>
     {#each data.entries as { icon, name }}
       <li>
-        <IconTooltip title={name} {icon} {iconsStyles} />
+        <Icon {icon} {iconsStyles} />
       </li>
     {/each}
   </ul>
@@ -67,6 +71,6 @@
   }
 
   [aria-expanded='true'] svg {
-    transform: rotate(0.25turn);
+    transform: rotate(90deg);
   }
 </style>

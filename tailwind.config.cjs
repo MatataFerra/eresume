@@ -26,7 +26,9 @@ module.exports = {
         typescript: '#3178C6',
         redux: '#764ABC',
         express: '#000000',
-        node: '#339933'
+        node: '#339933',
+        javascript: '#F7DF1E',
+        vitest: '#6E9F18'
       },
 
       fontFamily: {

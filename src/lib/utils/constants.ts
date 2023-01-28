@@ -71,28 +71,28 @@ export const PROJECTS = {
   inchequeable: {
     name: 'Inchequeable',
     href: 'https://inchequeable.com.ar',
-    image: 'Blog1.png'
+    image: 'Blog1.webp'
   },
   teslo: {
     name: 'E-Commerce',
     href: 'https://teslo.vercel.app/',
-    image: 'ecommerce1.png'
+    image: 'ecommerce1.webp'
   },
   windows: {
     name: 'Windows 11 Clone',
     href: 'https://matiasferraro.com.ar',
-    image: 'Portfolio1.png'
+    image: 'Portfolio1.webp'
   },
   rps: {
     name: 'Rock Paper Scissors',
     href: 'https://rps-mferraro.vercel.app/',
-    image: 'svelte3.png'
+    image: 'svelte3.webp'
   },
 
   maps: {
     name: 'Maps',
     href: 'https://maps-mferraro.vercel.app/',
-    image: 'vue-ts1.png'
+    image: 'vue-ts1.webp'
   }
 };
 
@@ -184,7 +184,7 @@ export const FRONTEND: Stack[] = [
   }
 ];
 
-export const FRONTEND_FRAMEWORKS: Stack[] = [
+export const REACT_FRAMEWORKS: Stack[] = [
   {
     name: 'NextJS',
     icon: 'next'
@@ -195,6 +195,10 @@ export const STYLES: Stack[] = [
   {
     name: 'SASS',
     icon: 'sass'
+  },
+  {
+    name: 'Tailwind',
+    icon: 'tailwind'
   }
 ];
 
@@ -228,10 +232,10 @@ export const PROGRAMMING_LANGUAGES: Stack[] = [
 ];
 
 export const STACK = {
-  'Programming Languages': PROGRAMMING_LANGUAGES,
+  Languages: PROGRAMMING_LANGUAGES,
   Frontend: FRONTEND,
-  'Frontend Frameworks': FRONTEND_FRAMEWORKS,
-  'React Components': REACT_COMPONENTS,
+  Frameworks: REACT_FRAMEWORKS,
+  Components: REACT_COMPONENTS,
   Styles: STYLES,
   Backend: BACKEND
 };

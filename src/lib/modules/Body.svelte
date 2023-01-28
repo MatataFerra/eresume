@@ -19,7 +19,7 @@
 </script>
 
 <div class="flex flex-col gap-8 p-4" use:watchResize={handleCVResize}>
-  <section class="flex justify-between">
+  <section class="sm:grid sm:grid-cols-[1fr,25%] sm:gap-x-16 flex flex-col gap-4">
     <div class="flex flex-col gap-4">
       <Header>cv</Header>
       <Name />
@@ -28,7 +28,7 @@
   </section>
   <section class="flex flex-col gap-10">
     <Summary />
-    <div class="grid grid-cols-[1fr,25%] gap-x-8">
+    <div class="sm:grid sm:grid-cols-[1fr,25%] sm:gap-x-16 flex flex-col gap-4">
       <WorkExperience />
       <Aside />
     </div>

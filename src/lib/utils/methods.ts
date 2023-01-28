@@ -35,7 +35,8 @@ export const generatePdf = (element: HTMLElement | null) => {
   pdf.html(element, {
     callback: (pdf) => {
       const lastPage = pdf.getNumberOfPages();
-      pdf.deletePage(lastPage);
+      if (lastPage > 3) pdf.deletePage(lastPage);
+
       pdf.output('dataurlnewwindow');
     },
     margin: [2, 2, 2, 2],
@@ -54,4 +55,12 @@ export const generatePdf = (element: HTMLElement | null) => {
       windowHeight: 3508
     }
   });
+};
+
+// download a file who is in the public folder
+export const downloadFile = (fileName = 'pdf_matias-ferraro.pdf') => {
+  const link = document.createElement('a');
+  link.href = `/pdf/${fileName}`;
+  link.download = fileName;
+  link.click();
 };
