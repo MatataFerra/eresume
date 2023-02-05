@@ -9,7 +9,6 @@
   <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" /><g
     id="SVGRepo_iconCarrier"
   >
-    <title>Download-3</title>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
       <g id="Download-3">
         <rect id="Rectangle" fill-rule="nonzero" x="0" y="0" width="24" height="24" />

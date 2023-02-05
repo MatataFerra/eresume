@@ -1,9 +1,11 @@
 <script lang="ts">
   import type { Brand } from '$lib/types';
-  import { BRANDS } from '$lib/utils/constants';
+  import { BRANDS, BRANDS_NAMES } from '$lib/utils/constants';
   import ColorWord from './ColorWord.svelte';
 
   export let brand: Brand;
+  let selectedBrand = BRANDS_NAMES.find((name) => name === brand) || 'next';
+  const Brand = BRANDS[selectedBrand];
 </script>
 
-<ColorWord color="{BRANDS[brand].color} font-bold">{BRANDS[brand].name}</ColorWord>
+<ColorWord color="{Brand?.color} font-bold">{Brand?.name}</ColorWord>

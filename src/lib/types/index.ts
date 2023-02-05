@@ -1,4 +1,5 @@
 import type * as Icon from '$lib/components/Icons/Stack';
+import type { BRANDS_NAMES } from '../utils/constants';
 
 export type Item = {
   description: string;
@@ -9,6 +10,7 @@ export type Job = {
   company: string;
   startDate: string;
   endDate: string;
+  description?: string;
   responsabilities: Item[];
 };
 
@@ -25,26 +27,10 @@ export type Project = {
   image: string;
 };
 
-export type Brand =
-  | 'next'
-  | 'chakra'
-  | 'mongo'
-  | 'material'
-  | 'react'
-  | 'sass'
-  | 'svelte'
-  | 'vue'
-  | 'factory'
-  | 'strategy'
-  | 'vitest'
-  | 'typescript'
-  | 'tailwind'
-  | 'node'
-  | 'express'
-  | 'redux';
+export type Brand = (typeof BRANDS_NAMES)[number];
 
 export type Brands = {
-  [key: string]: {
+  [key in Brand]: {
     color: string;
     name: string;
   };
@@ -59,4 +45,10 @@ export type Accordion = {
   isOpen: boolean;
   title: string;
   entries: Stack[];
+};
+
+export type PDF_JOB = {
+  freelance: Job;
+  steplix: Job;
+  corebiz: Job;
 };

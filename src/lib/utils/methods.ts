@@ -1,4 +1,5 @@
 import { jsPDF } from 'jspdf';
+import { goto } from '$app/navigation';
 
 export function outsideClick(
   node: HTMLElement,
@@ -63,4 +64,8 @@ export const downloadFile = (fileName = 'pdf_matias-ferraro.pdf') => {
   link.href = `/pdf/${fileName}`;
   link.download = fileName;
   link.click();
+};
+
+export const navigateTo = (url: string) => {
+  goto(url);
 };

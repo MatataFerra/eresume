@@ -28,7 +28,12 @@ module.exports = {
         express: '#000000',
         node: '#339933',
         javascript: '#F7DF1E',
-        vitest: '#6E9F18'
+        vitest: '#6E9F18',
+        vtex: '#E60014',
+        nextauth: '#B327E2',
+        cloudinary: '#1E8CBE',
+        mapbox: '#3BB2D0',
+        jwt: '#D63AFF'
       },
 
       fontFamily: {

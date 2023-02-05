@@ -11,10 +11,15 @@
     <p class="text-yellow lowercase font-bold">{job.startDate} - {job.endDate}</p>
   </div>
   <div>
-    <slot name="description" />
+    <p class="text-white font-fira">
+      {#if job.description}
+        {job.description}
+      {/if}
+    </p>
 
     {#if job.responsabilities.length}
       <List responsabilities={job.responsabilities} />
     {/if}
   </div>
 </article>
+<hr class="h-px my-8 bg-gray border-0" />

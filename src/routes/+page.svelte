@@ -3,14 +3,14 @@
   import DotsLoader from '$lib/components/Loaders/DotsLoader.svelte';
   import Body from '$lib/modules/Body.svelte';
   import Navbar from '$lib/modules/Navbar/Navbar.svelte';
-  import { numberOfLines, cvHeight } from '$lib/store/window';
+  import { numberOfLines, cvHeight } from '$lib/store/';
 
   $: $numberOfLines = Math.floor(($cvHeight + 8) / 20);
 
   let show = true;
   $: setTimeout(() => {
     show = false;
-  }, 2000);
+  }, 1500);
 </script>
 
 <svelte:head>
@@ -25,7 +25,7 @@
       <Lines limit={$numberOfLines} />
     </div>
     <div class="flex flex-col">
-      <Navbar />
+      <Navbar method={'download'} />
       <Body />
     </div>
   </article>

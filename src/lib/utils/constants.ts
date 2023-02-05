@@ -1,4 +1,4 @@
-import type { Brands, Course, Job, Stack } from '$lib/types';
+import type { Brands, Course, Job, PDF_JOB, Stack } from '$lib/types';
 
 export const PERSONAL_INFO = {
   name: 'Matias Ferraro',
@@ -12,6 +12,62 @@ export const PERSONAL_INFO = {
   summary:
     "I'm a Frontend Developer with 3 years of experience, I'm passionate about web development and I'm always looking to develop better and better applications. I work with the latest tools to provide the best user experience. I focus on performance, clean code and best practices."
 };
+
+export const JOB_EXPERIENCE: Job[] = [
+  {
+    title: 'Frontend Web Developer',
+    company: 'Freelance',
+    startDate: 'May.2021',
+    endDate: 'Present',
+    description:
+      "I'm working as a freelance developer, I'm working with different clients, I'm developing their websites and apps using ReactJS, NextJS, VueJS, Svelte, TailwindCSS, ChakraUI, among others. ",
+    responsabilities: [
+      {
+        description: 'I work hard to deliver the best quality to my clients'
+      }
+    ]
+  },
+  {
+    title: 'Frontend Web Developer',
+    company: 'Steplix',
+    startDate: 'Ago.2022',
+    endDate: 'Feb.2023',
+    description:
+      'I was responsible for the development of the frontend using NextJS framework & React library, for state management I used Redux, also I used TailwindCSS for the styles',
+    responsabilities: [
+      {
+        description: 'Developing and maintaining the frontend of the company'
+      },
+      {
+        description: 'Working with NextJS, React, VueJS, TypeScript, TailwindCSS'
+      },
+      {
+        description:
+          'Working with the team in Scrum Methodology to improve the code quality and the performance of the apps'
+      }
+    ]
+  },
+
+  {
+    title: 'Frontend Web Developer',
+    company: 'CoreBiz',
+    startDate: 'Sept.2021',
+    endDate: 'Jul.2022',
+    description:
+      'I was responsible for the development of e-commerce apps using vtex, platform, also develop custom apps for the platform using react',
+    responsabilities: [
+      {
+        description: 'Developing and maintaining the frontend of the company'
+      },
+      {
+        description: 'Working with ReactJS, VTEXIO'
+      },
+      {
+        description: 'Developing e-commerce apps also improve the performance of the existing ones'
+      }
+    ]
+  }
+];
 
 export const JOB: Job = {
   title: 'Frontend Web Developer',
@@ -30,6 +86,62 @@ export const JOB: Job = {
         'Working with the team in Scrum Methodology to improve the code quality and the performance of the apps'
     }
   ]
+};
+
+export const PDF_JOBS: PDF_JOB = {
+  freelance: {
+    title: 'Frontend Web Developer',
+    company: 'Freelance',
+    startDate: 'Feb.2023',
+    endDate: 'Present',
+    description:
+      "I'm working as a freelance developer, I'm working with different clients, I'm developing their websites and apps using ReactJS, NextJS, VueJS, Svelte, TailwindCSS, ChakraUI, among others. ",
+    responsabilities: [
+      {
+        description: 'I work hard to deliver the best quality to my clients'
+      }
+    ]
+  },
+  steplix: {
+    title: 'Frontend Web Developer',
+    company: 'Steplix',
+    startDate: 'Ago.2022',
+    endDate: 'Feb.2023',
+    description:
+      'I was responsible for the development of the frontend using NextJS framework & React library, for state management I used Redux, also I used TailwindCSS for the styles',
+    responsabilities: [
+      {
+        description: 'Developing and maintaining the frontend of the company'
+      },
+      {
+        description: 'Working with NextJS, React, VueJS, TypeScript, TailwindCSS'
+      },
+      {
+        description:
+          'Working with the team in Scrum Methodology to improve the code quality and the performance of the apps'
+      }
+    ]
+  },
+
+  corebiz: {
+    title: 'Frontend Web Developer',
+    company: 'CoreBiz',
+    startDate: 'Sept.2021',
+    endDate: 'Jul.2022',
+    description:
+      'I was responsible for the development of e-commerce apps using vtex, platform, also develop custom apps for the platform using react',
+    responsabilities: [
+      {
+        description: 'Developing and maintaining the frontend of the company'
+      },
+      {
+        description: 'Working with ReactJS, VTEXIO'
+      },
+      {
+        description: 'Developing e-commerce apps also improve the performance of the existing ones'
+      }
+    ]
+  }
 };
 
 export const SKILLS = ['Team working', 'Fast learning', 'Self motivated', 'Self time management'];
@@ -89,7 +201,6 @@ export const PROJECTS = {
     href: 'https://rps-mferraro.vercel.app/',
     image: 'svelte3.webp'
   },
-
   maps: {
     name: 'Maps',
     href: 'https://maps-mferraro.vercel.app/',
@@ -97,7 +208,51 @@ export const PROJECTS = {
   }
 };
 
-export const BRANDS: Brands = {
+export const BRANDS_NAMES = [
+  'next',
+  'chakra',
+  'mongo',
+  'material',
+  'react',
+  'sass',
+  'svelte',
+  'vue',
+  'factory',
+  'strategy',
+  'vitest',
+  'typescript',
+  'tailwind',
+  'node',
+  'express',
+  'redux',
+  'jest',
+  'cypress',
+  'storybook',
+  'graphql',
+  'apollo',
+  'prisma',
+  'firebase',
+  'vercel',
+  'netlify',
+  'heroku',
+  'aws',
+  'docker',
+  'git',
+  'github',
+  'gitlab',
+  'bitbucket',
+  'vscode',
+  'vim',
+  'linux',
+  'windows',
+  'vtex',
+  'cloudinary',
+  'mapbox',
+  'nextauth',
+  'jwt'
+] as const;
+
+export const BRANDS: Partial<Brands> = {
   next: {
     color: 'text-next bg-white px-2',
     name: 'NextJS'
@@ -167,6 +322,32 @@ export const BRANDS: Brands = {
   node: {
     color: 'text-node',
     name: 'Node'
+  },
+
+  vtex: {
+    color: 'text-vtex',
+    name: 'VTEX'
+  },
+
+  tailwind: {
+    color: 'text-tailwind',
+    name: 'TailwindCSS'
+  },
+  cloudinary: {
+    color: 'text-cloudinary',
+    name: 'Cloudinary'
+  },
+  mapbox: {
+    color: 'text-mapbox',
+    name: 'MapBox'
+  },
+  nextauth: {
+    color: 'text-nextauth',
+    name: 'NextAuth'
+  },
+  jwt: {
+    color: 'text-jwt',
+    name: 'JWT'
   }
 };
 

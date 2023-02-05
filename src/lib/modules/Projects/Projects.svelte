@@ -12,8 +12,8 @@
       Site made with <BrandColorWord brand="next" /> & <BrandColorWord brand="typescript" />, <BrandColorWord
         brand="chakra"
       /> and <BrandColorWord brand="mongo" />. It's a blog where you can create posts and comment on
-      them. It has a login system with JWT and Bcrypt for password encryption. It also has a system
-      to upload images to Cloudinary.
+      them. It has a login system with <BrandColorWord brand="jwt" /> and Bcrypt for password encryption.
+      It also has a system to upload images to <BrandColorWord brand="cloudinary" />.
     </p>
   </Project>
 
@@ -22,9 +22,11 @@
       Site made with <BrandColorWord brand="next" /> & <BrandColorWord brand="typescript" />, <BrandColorWord
         brand="material"
       /> and <BrandColorWord brand="mongo" />. It's an e-commerce site where you can buy any kind of
-      clothes. It has a login system with NextAuth. It also count with many features like a shopping
-      cart, a wishlist, a system to upload images to Cloudinary, a store locator, an admin site with
-      stock control, a system to create, update and delete products.
+      clothes. It has a login system with <BrandColorWord brand="nextauth" />. It also count with
+      many features like a shopping cart, a wishlist, a system to upload images to <BrandColorWord
+        brand="cloudinary"
+      />, a store locator, an admin site with stock control, a system to create, update and delete
+      products.
     </p>
   </Project>
   <Project projectInfo={PROJECTS.windows} finalLine>
@@ -50,10 +52,10 @@
     <p class="text-white" slot="description">
       This app was made with <BrandColorWord brand="vue" /> and <BrandColorWord
         brand="typescript"
-      />, is a Map who is integrated with MapBox API. It has a search bar where you can search for a
-      place and it will show you the location on the map. It also has a button to get your current
-      location. If you want you can trace the path with a line and know how much distance and time
-      are between two dots.
+      />, is a Map who is integrated with <BrandColorWord brand="mapbox" /> API. It has a search bar
+      where you can search for a place and it will show you the location on the map. It also has a button
+      to get your current location. If you want you can trace the path with a line and know how much
+      distance and time are between two dots.
     </p>
   </Project>
 </section>

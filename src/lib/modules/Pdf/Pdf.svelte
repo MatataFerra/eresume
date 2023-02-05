@@ -31,12 +31,12 @@
           </div>
           <PdfContactInfo />
         </section>
-        <section class="flex flex-col gap-4 mb-56">
+        <section class="flex flex-col gap-4 mb-4">
           <PdfSummary />
           <PdfWork />
         </section>
       </div>
-      <section class="px-4 mb-64">
+      <section class="px-4 mb-4">
         <PdfAside />
       </section>
       <section class="px-4 mt-4 ">
