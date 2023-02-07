@@ -1,6 +1,9 @@
 import type * as Icon from '$lib/components/Icons/Stack';
 import type { BRANDS_NAMES } from '../utils/constants';
 
+export type Method = 'pdf' | 'navigate' | 'download';
+export type Screen = 'home' | 'pdf';
+
 export type Item = {
   description: string;
 };

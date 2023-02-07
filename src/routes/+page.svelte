@@ -4,6 +4,7 @@
   import Body from '$lib/modules/Body.svelte';
   import Navbar from '$lib/modules/Navbar/Navbar.svelte';
   import { numberOfLines, cvHeight } from '$lib/store/';
+  import { METHODS_NAVBAR } from '$lib/utils/constants';
 
   $: $numberOfLines = Math.floor(($cvHeight + 8) / 20);
 
@@ -25,7 +26,7 @@
       <Lines limit={$numberOfLines} />
     </div>
     <div class="flex flex-col">
-      <Navbar method={'download'} />
+      <Navbar method={METHODS_NAVBAR.home} />
       <Body />
     </div>
   </article>

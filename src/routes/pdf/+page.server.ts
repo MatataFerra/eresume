@@ -5,4 +5,8 @@ import type { PageServerLoad } from './$types';
 export const load: PageServerLoad = async () => {
   console.log('Private route Redirect to /');
   throw redirect(303, '/');
+  // when is ok
+  // return {
+  //   status: 200
+  // };
 };

@@ -5,11 +5,12 @@
   import Tooltip from '$lib/components/Tooltip/Tooltip.svelte';
   import { generatePdf, navigateTo, downloadFile } from '$lib/utils/methods';
   import { pdf } from '$lib/store/';
+  import type { Method } from '$lib/types';
 
   let url: string = '/pdf';
   let fileName: string = 'pdf_matias-ferraro.pdf';
 
-  export let method: 'pdf' | 'navigate' | 'download';
+  export let method: Method;
   let methods = {
     pdf: () => {
       if (method === 'pdf') {

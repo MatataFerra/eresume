@@ -1,4 +1,4 @@
-import type { Brands, Course, Job, PDF_JOB, Stack } from '$lib/types';
+import type { Brands, Course, Job, Method, PDF_JOB, Screen, Stack } from '$lib/types';
 
 export const PERSONAL_INFO = {
   name: 'Matias Ferraro',
@@ -10,7 +10,7 @@ export const PERSONAL_INFO = {
   PDFplace: 'Living in Italy',
   province: 'Province Asti, Piedmont',
   summary:
-    "I'm a Frontend Developer with 3 years of experience, I'm passionate about web development and I'm always looking to develop better and better applications. I work with the latest tools to provide the best user experience. I focus on performance, clean code and best practices."
+    'I am a Frontend Developer with 3 years of experience, I am passionate about web development and I am always looking for improving my skills and making better applications. I work with the latest tools to provide the best user experience. I focus on performance, clean code and best practices.'
 };
 
 export const JOB_EXPERIENCE: Job[] = [
@@ -20,7 +20,7 @@ export const JOB_EXPERIENCE: Job[] = [
     startDate: 'May.2021',
     endDate: 'Present',
     description:
-      "I'm working as a freelance developer, I'm working with different clients, I'm developing their websites and apps using ReactJS, NextJS, VueJS, Svelte, TailwindCSS, ChakraUI, among others. ",
+      'I am working as a freelance developer, with different clients, developing their websites and apps using ReactJS, NextJS, VueJS, Svelte, TailwindCSS, ChakraUI, among others.',
     responsabilities: [
       {
         description: 'I work hard to deliver the best quality to my clients'
@@ -33,7 +33,7 @@ export const JOB_EXPERIENCE: Job[] = [
     startDate: 'Ago.2022',
     endDate: 'Feb.2023',
     description:
-      'I was responsible for the development of the frontend using NextJS framework & React library, for state management I used Redux, also I used TailwindCSS for the styles',
+      'I was in charge of developing the frontend, using NextJS framework & React library, for state management I used Redux, also TailwindCSS for the styles',
     responsabilities: [
       {
         description: 'Developing and maintaining the frontend of the company'
@@ -54,7 +54,7 @@ export const JOB_EXPERIENCE: Job[] = [
     startDate: 'Sept.2021',
     endDate: 'Jul.2022',
     description:
-      'I was responsible for the development of e-commerce apps using vtex, platform, also develop custom apps for the platform using react',
+      'I was responsible for developing the e-commerce apps using vtex, platform, as well as developing custom apps for the platform using react',
     responsabilities: [
       {
         description: 'Developing and maintaining the frontend of the company'
@@ -63,39 +63,21 @@ export const JOB_EXPERIENCE: Job[] = [
         description: 'Working with ReactJS, VTEXIO'
       },
       {
-        description: 'Developing e-commerce apps also improve the performance of the existing ones'
+        description:
+          'Developing e-commerce apps as well as improve the performance of the existing ones'
       }
     ]
   }
 ];
 
-export const JOB: Job = {
-  title: 'Frontend Web Developer',
-  company: 'Steplix',
-  startDate: 'Ago - 2022',
-  endDate: 'present',
-  responsabilities: [
-    {
-      description: 'Developing and maintaining the frontend of the company'
-    },
-    {
-      description: 'Working with NextJS, React, VueJS, TypeScript, TailwindCSS'
-    },
-    {
-      description:
-        'Working with the team in Scrum Methodology to improve the code quality and the performance of the apps'
-    }
-  ]
-};
-
 export const PDF_JOBS: PDF_JOB = {
   freelance: {
     title: 'Frontend Web Developer',
     company: 'Freelance',
-    startDate: 'Feb.2023',
+    startDate: 'May.2021',
     endDate: 'Present',
     description:
-      "I'm working as a freelance developer, I'm working with different clients, I'm developing their websites and apps using ReactJS, NextJS, VueJS, Svelte, TailwindCSS, ChakraUI, among others. ",
+      'I am working as a freelance developer, with different clients, developing their websites and apps using ReactJS, NextJS, VueJS, Svelte, TailwindCSS, ChakraUI, among others.',
     responsabilities: [
       {
         description: 'I work hard to deliver the best quality to my clients'
@@ -108,7 +90,7 @@ export const PDF_JOBS: PDF_JOB = {
     startDate: 'Ago.2022',
     endDate: 'Feb.2023',
     description:
-      'I was responsible for the development of the frontend using NextJS framework & React library, for state management I used Redux, also I used TailwindCSS for the styles',
+      'I was in charge of developing the frontend, using NextJS framework & React library, for state management I used Redux, also TailwindCSS for the styles',
     responsabilities: [
       {
         description: 'Developing and maintaining the frontend of the company'
@@ -129,7 +111,7 @@ export const PDF_JOBS: PDF_JOB = {
     startDate: 'Sept.2021',
     endDate: 'Jul.2022',
     description:
-      'I was responsible for the development of e-commerce apps using vtex, platform, also develop custom apps for the platform using react',
+      'I was responsible for developing the e-commerce apps using vtex, platform, as well as developing custom apps for the platform using react',
     responsabilities: [
       {
         description: 'Developing and maintaining the frontend of the company'
@@ -138,7 +120,8 @@ export const PDF_JOBS: PDF_JOB = {
         description: 'Working with ReactJS, VTEXIO'
       },
       {
-        description: 'Developing e-commerce apps also improve the performance of the existing ones'
+        description:
+          'Developing e-commerce apps as well as improve the performance of the existing ones'
       }
     ]
   }
@@ -152,7 +135,7 @@ export const COURSES: Course[] = [
     institution: 'Udemy',
     year: '2021',
     description:
-      'This course allows manage NextJs in a complex way. Building real apps on real context with real issues. Also I learned NextAuth, TypeScript, MongoDB, among others'
+      'This course allows to manage NextJs in a complex way. Building real apps on real context with real issues. Also I learned NextAuth, TypeScript, MongoDB, among others'
   },
 
   {
@@ -464,3 +447,8 @@ export const PDF_STACK: Stack[] = [
     icon: 'ts'
   }
 ];
+
+export const METHODS_NAVBAR: Record<Screen, Method> = {
+  pdf: 'pdf',
+  home: 'download'
+};

@@ -1,7 +1,7 @@
 <script lang="ts">
   import Experience from '$lib/components/Experience/Experience.svelte';
   import Title from '../../components/Title/Title.svelte';
-  import { JOB, JOB_EXPERIENCE } from '$lib/utils/constants';
+  import { JOB_EXPERIENCE } from '$lib/utils/constants';
 </script>
 
 <div>
