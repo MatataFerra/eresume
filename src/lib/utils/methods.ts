@@ -1,5 +1,7 @@
 import { jsPDF } from 'jspdf';
 import { goto } from '$app/navigation';
+import { BAN_KEYWORDS, type BRANDS_NAMES } from './constants';
+import { createSpan } from '.';
 
 export function outsideClick(
   node: HTMLElement,
@@ -58,7 +60,6 @@ export const generatePdf = (element: HTMLElement | null) => {
   });
 };
 
-// download a file who is in the public folder
 export const downloadFile = (fileName = 'pdf_matias-ferraro.pdf') => {
   const link = document.createElement('a');
   link.href = `/pdf/${fileName}`;
@@ -68,4 +69,33 @@ export const downloadFile = (fileName = 'pdf_matias-ferraro.pdf') => {
 
 export const navigateTo = (url: string) => {
   goto(url);
+};
+
+// detect key words in a string and return a new string with the key words wrapped in a span
+export const highlightKeyWords = (text: string, keyWords: typeof BRANDS_NAMES) => {
+  const words = text.split(' ');
+  const newWords = words.map((word) => {
+    const findedKeyword: string | undefined = keyWords.find((keyword) =>
+      word.toLowerCase().startsWith(keyword)
+    );
+    const isBannedWord = BAN_KEYWORDS.some((banKeyword) => banKeyword === word.toLowerCase());
+
+    if (isBannedWord) return word;
+
+    if (findedKeyword) {
+      return createSpan(word, findedKeyword);
+    }
+    return word;
+  });
+  return newWords.join(' ');
+};
+
+export const parseStringIntoHTML = (str: string) => {
+  // runs only on the client
+  if (typeof window === 'undefined') return;
+
+  const container = document.createElement('p');
+  container.classList.add('text-white', 'font-fira');
+  container.innerHTML = str;
+  return container;
 };

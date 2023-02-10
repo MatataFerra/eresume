@@ -33,7 +33,7 @@ export const JOB_EXPERIENCE: Job[] = [
     startDate: 'Ago.2022',
     endDate: 'Feb.2023',
     description:
-      'I was in charge of developing the frontend, using NextJS framework & React library, for state management I used Redux, also TailwindCSS for the styles',
+      'I was in charge of developing the frontend, using NextJS framework & React library, for state management I used Redux, also TailwindCSS for the styles.',
     responsabilities: [
       {
         description: 'Developing and maintaining the frontend of the company'
@@ -54,7 +54,7 @@ export const JOB_EXPERIENCE: Job[] = [
     startDate: 'Sept.2021',
     endDate: 'Jul.2022',
     description:
-      'I was responsible for developing the e-commerce apps using vtex, platform, as well as developing custom apps for the platform using react',
+      'I was responsible for developing the e-commerce apps using vtex, platform, as well as developing custom apps for the platform using react.',
     responsabilities: [
       {
         description: 'Developing and maintaining the frontend of the company'
@@ -452,3 +452,5 @@ export const METHODS_NAVBAR: Record<Screen, Method> = {
   pdf: 'pdf',
   home: 'download'
 };
+
+export const BAN_KEYWORDS = ['reactive', 'reactivity', 'reactividad'];
